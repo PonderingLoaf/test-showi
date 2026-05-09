@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="text"></p>
+
+		<script>
+			const texts = [
+				"I",
+				"Am",
+				"Lost",
+				"-... --- -.. .... .. .-. . .. -- . .-. .-.-.- -..- -.-- --.. -..-. .-- .... . .-. . -....- .- -- -....- ..",
+			];
+
+			const textElement = document.getElementById("text");
+
+			let index = 0;
+
+			setInterval(() => {
+				index++;
+
+				if (index >= texts.length) {
+					index = 0;
+				}
+
+				textElement.textContent = texts[index];
+			}, 500);
+		</script>
+	</body>
+</html>
